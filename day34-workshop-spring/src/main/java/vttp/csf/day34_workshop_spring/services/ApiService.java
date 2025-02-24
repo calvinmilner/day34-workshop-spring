@@ -35,7 +35,7 @@ public class ApiService {
         ResponseEntity<String> resp = null;
 
         resp = template.exchange(req, String.class);
-        System.out.println(resp.getBody());
+        // System.out.println(resp.getBody());
         JsonReader reader = Json.createReader(new StringReader(resp.getBody()));
         JsonObject payload = reader.readObject();
         JsonArray data = payload.getJsonArray("data");
